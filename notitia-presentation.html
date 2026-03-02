@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notitia Corp â PrÃ©sentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--orange:#f97316;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--gray-700:#334155;--gray-800:#1e293b;--white:#ffffff}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--navy);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+.print-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);padding:12px 32px;display:flex;align-items:center;justify-content:space-between}
+.print-bar .logo-text{color:var(--white);font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase}
+.print-btn{background:var(--orange);color:var(--white);border:none;padding:10px 24px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s}
+.print-btn:hover{background:#ea6c0e;transform:translateY(-1px);box-shadow:0 4px 12px rgba(249,115,22,0.4)}
+.container{max-width:900px;margin:0 auto;padding:80px 32px 60px}
+.hero{text-align:center;padding:100px 0 80px;position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--orange);border-radius:2px}
+.hero h1{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;color:var(--navy);letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:18px;color:var(--gray-500);max-width:600px;margin:0 auto;font-weight:400}
+.section{padding:64px 0;border-bottom:1px solid var(--gray-200)}
+.section:last-child{border-bottom:none}
+.section-number{font-size:clamp(4rem,8vw,6rem);font-weight:900;color:var(--gray-100);line-height:1;margin-bottom:-20px;position:relative;z-index:0;letter-spacing:-4px}
+.section-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--navy);margin-bottom:24px;position:relative;z-index:1;letter-spacing:-0.5px}
+.section-title::after{content:'';display:block;width:40px;height:3px;background:var(--orange);margin-top:12px;border-radius:2px}
+.section-body{font-size:16px;color:var(--gray-600);line-height:1.8}
+.section-body p{margin-bottom:16px}
+.service-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;padding:28px;margin-bottom:16px;transition:all 0.2s}
+.service-card:hover{border-color:var(--orange);box-shadow:0 4px 16px rgba(249,115,22,0.08)}
+.service-card h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.service-card p{font-size:14px;color:var(--gray-500);line-height:1.6;margin:0}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{counter-increment:step;display:flex;align-items:flex-start;gap:20px;padding:20px 0;border-bottom:1px solid var(--gray-100)}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(step);flex-shrink:0;width:40px;height:40px;background:var(--navy);color:var(--white);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.steps .step-content strong{font-weight:700;color:var(--navy)}
+.steps .step-content span{color:var(--gray-500);font-size:14px}
+.pilot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:24px 0}
+.pilot-item{background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:24px;position:relative;overflow:hidden}
+.pilot-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--orange)}
+.pilot-item h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
+.pilot-item p{font-size:13px;color:var(--gray-500);line-height:1.5;margin:0}
+.results-bar{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.result-badge{background:var(--navy);color:var(--white);padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:0.3px}
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;border-radius:12px;overflow:hidden;border:1px solid var(--gray-200)}
+.comparison-table thead{background:var(--navy);color:var(--white)}
+.comparison-table th{padding:14px 18px;text-align:left;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+.comparison-table td{padding:14px 18px;border-bottom:1px solid var(--gray-100)}
+.comparison-table tbody tr:nth-child(even){background:var(--gray-50)}
+.comparison-table .col-erp{color:var(--gray-400)}
+.comparison-table .col-pilot{color:var(--navy);font-weight:600}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin:24px 0}
+.pricing-card{border:2px solid var(--gray-200);border-radius:16px;padding:32px;position:relative;transition:all 0.2s}
+.pricing-card.featured{border-color:var(--orange);background:linear-gradient(135deg,#fff7ed 0%,var(--white) 100%)}
+.pricing-card .badge{display:inline-block;background:var(--orange);color:var(--white);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.pricing-card h4{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:8px}
+.pricing-card .price{font-size:32px;font-weight:900;color:var(--navy);margin-bottom:4px}
+.pricing-card .price-detail{font-size:13px;color:var(--gray-400);margin-bottom:20px}
+.pricing-card ul{list-style:none;padding:0}
+.pricing-card ul li{font-size:14px;color:var(--gray-600);padding:6px 0;padding-left:24px;position:relative}
+.pricing-card ul li::before{content:'â';position:absolute;left:0;color:var(--orange);font-weight:700}
+.pricing-note{font-size:13px;color:var(--gray-400);text-align:center;margin-top:16px;font-style:italic}
+.cta-section{text-align:center;padding:80px 0 40px}
+.cta-section h3{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:12px;letter-spacing:-0.5px}
+.cta-section p{font-size:16px;color:var(--gray-500);margin-bottom:32px}
+.contact-info{display:inline-flex;flex-direction:column;gap:8px;text-align:left;background:var(--gray-50);padding:28px 36px;border-radius:12px;border:1px solid var(--gray-200)}
+.contact-info .name{font-weight:800;font-size:18px;color:var(--navy)}
+.contact-info .role{font-size:13px;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px}
+.contact-info a{color:var(--orange);text-decoration:none;font-weight:500;font-size:14px}
+.contact-info a:hover{text-decoration:underline}
+.contact-info .phone{color:var(--gray-600);font-size:14px}
+footer{text-align:center;padding:40px 0;border-top:1px solid var(--gray-200);margin-top:40px}
+footer p{font-size:12px;color:var(--gray-400)}
+@media print{
+.print-bar{display:none!important}
+.container{padding-top:20px}
+body{font-size:12px}
+.section{padding:32px 0;page-break-inside:avoid}
+.hero{padding:40px 0 32px}
+.section-number{font-size:3rem}
+.pricing-grid{grid-template-columns:1fr 1fr}
+.pilot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+.container{padding:70px 20px 40px}
+.hero{padding:60px 0 48px}
+.pricing-grid{grid-template-columns:1fr}
+.pilot-grid{grid-template-columns:1fr}
+.comparison-table{font-size:12px}
+.comparison-table th,.comparison-table td{padding:10px 12px}
+.results-bar{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="print-bar">
+<span class="logo-text">Notitia Corp</span>
+<button class="print-btn" onclick="window.print()">Imprimer / TÃ©lÃ©charger en PDF</button>
+</div>
+<div class="container">
+<div class="hero">
+<h1>Notitia <span>Corp</span></h1>
+<p>Solutions numÃ©riques sur mesure pour entreprises artisanales et PME</p>
+</div>
+
+<div class="section">
+<div class="section-number">01</div>
+<h2 class="section-title">Qui sommes-nous</h2>
+<div class="section-body">
+<p>Notitia Corp est un cabinet de solutions numÃ©riques spÃ©cialisÃ© dans la conception de systÃ¨mes sur mesure pour les entreprises artisanales et les PME.</p>
+<p>Nous ne vendons pas de logiciels gÃ©nÃ©riques. Nous construisons des outils taillÃ©s pour votre mÃ©tier, vos Ã©quipes, vos contraintes.</p>
+<p>Notre positionnement : <strong>lâintelligence au service de lâopÃ©rationnel</strong>. Chaque systÃ¨me livrÃ© rÃ©sout un problÃ¨me concret avec un ROI visible en moins de 6 mois.</p>
+</div>
+</div>
+
+<div class="section">
+<div class="section-number">02</div>
+<h2 class="section-title">Ce que nous faisons</h2>
+<div class="section-body">
+<div class="service-card">
+<h4>Applications mÃ©tier sur mesure</h4>
+<p>Outils web adaptÃ©s Ã  vos processus : suivi chantiers, gestion projets, reporting financier, planification Ã©quipes, traÃ§abilitÃ© rÃ©glementaire.</p>
+</div>
+<div class="service-card">
+<h4>Automatisation intelligente</h4>
+<p>Agents IA pour tÃ¢ches rÃ©pÃ©titives : veille, reporting, alertes, enrichissement donnÃ©es.</p>
+</div>
+<div class="service-card">
+<h4>Conseil et architecture numÃ©rique</h4>
+<p>Audit outils existants, accompagnement transformation digitale sans disruption.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-number">03</div>
+<h2 class="section-title">Notre approche en 5 Ã©tapes</h2>
+<div class="section-body">
+<ol class="steps">
+<li><div class="step-content"><strong>Audit</strong><br><span>Analyse processus, douleurs et objectifs</span></div></li>
+<li><div class="step-content"><strong>Prototype</strong><br><span>PremiÃ¨re version fonctionnelle en 2 semaines</span></div></li>
+<li><div class="step-content"><strong>DÃ©veloppement</strong><br><span>ItÃ©rations courtes avec validation client</span></div></li>
+<li><div class="step-content"><strong>DÃ©ploiement</strong><br><span>Mise en production, formation, documentation</span></div></li>
+<li><div class="step-content"><strong>Suivi</strong><br><span>Maintenance, Ã©volutions, support rÃ©actif</span></div></li>
+</ol>
+</div>
+</div>
+
+<div class="section">
+<div class="section-number">04</div>
+<h2 class="section-title">BE Pilot â Notre solution phare</h2>
+<div class="section-body">
+<p>Premier outil de gestion de chantiers conÃ§u pour les installateurs de cuisines professionnelles.</p>
+<div class="pilot-grid">
+<div class="pilot-item"><h4>Suivi de projet</h4><p>De lâÃ©tude Ã  la rÃ©ception, toutes phases visibles en temps rÃ©el</p></div>
+<div class="pilot-item"><h4>Planning techniciens</h4><p>Affectations, disponibilitÃ©s, conflits dÃ©tectÃ©s automatiquement</p></div>
+<div class="pilot-item"><h4>SAV et Maintenance</h4><p>Historique complet par Ã©quipement, alertes avant Ã©chÃ©ances</p></div>
+<div class="pilot-item"><h4>TraÃ§abilitÃ© rÃ©glementaire</h4><p>CERFA fluides, contrÃ´les obligatoires, exports conformes</p></div>
+<div class="pilot-item"><h4>Reporting financier</h4><p>Budget, facturÃ©, encaissÃ©, marge par affaire</p></div>
+<div class="pilot-item"><h4>Journal de chantier</h4><p>Trace Ã©crite de chaque intervention, accessible Ã  toutes les Ã©quipes</p></div>
+</div>
+<div class="results-bar">
+<span class="result-badge">15h/semaine Ã©conomisÃ©es</span>
+<span class="result-badge">ZÃ©ro oubli rÃ©glementaire</span>
+<span class="result-badge">Vision consolidÃ©e direction</span>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-number">05</div>
+<h2 class="section-title">Pourquoi Notitia Corp plutÃ´t quâun ERP</h2>
+<div class="section-body">
+<table class="comparison-table">
+<thead><tr><th>CritÃ¨re</th><th>ERP gÃ©nÃ©raliste</th><th>BE Pilot</th></tr></thead>
+<tbody>
+<tr><td>AdaptÃ© au mÃ©tier</td><td class="col-erp">GÃ©nÃ©rique</td><td class="col-pilot">ConÃ§u pour lâinstallation cuisine</td></tr>
+<tr><td>DÃ©lai dÃ©ploiement</td><td class="col-erp">6 Ã  18 mois</td><td class="col-pilot">4 Ã  6 semaines</td></tr>
+<tr><td>CoÃ»t total</td><td class="col-erp">15 000 Ã  80 000 â¬</td><td class="col-pilot">Ã partir de 6 000 â¬</td></tr>
+<tr><td>Formation</td><td class="col-erp">Intensive (semaines)</td><td class="col-pilot">1 demi-journÃ©e</td></tr>
+<tr><td>Support</td><td class="col-erp">Hotline centralisÃ©e</td><td class="col-pilot">Interlocuteur direct</td></tr>
+<tr><td>ÃvolutivitÃ©</td><td class="col-erp">Rigide</td><td class="col-pilot">Sur mesure</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<div class="section-number">06</div>
+<h2 class="section-title">Tarification</h2>
+<div class="section-body">
+<div class="pricing-grid">
+<div class="pricing-card">
+<span class="badge">Option A</span>
+<h4>One-shot</h4>
+<div class="price">8 000 â¬ <span style="font-size:14px;font-weight:400;color:var(--gray-400)">HT</span></div>
+<div class="price-detail">40% au dÃ©marrage Â· 60% Ã  la livraison</div>
+<ul>
+<li>DÃ©veloppement complet</li>
+<li>DÃ©ploiement</li>
+<li>Formation</li>
+<li>3 mois de support</li>
+</ul>
+</div>
+<div class="pricing-card featured">
+<span class="badge">Option B â RecommandÃ©e</span>
+<h4>DÃ©ploiement + Maintenance</h4>
+<div class="price">6 000 â¬ <span style="font-size:14px;font-weight:400;color:var(--gray-400)">HT + 150 â¬/mois</span></div>
+<div class="price-detail">DÃ©veloppement + suivi continu</div>
+<ul>
+<li>DÃ©veloppement complet</li>
+<li>Maintenance continue</li>
+<li>Mises Ã  jour</li>
+<li>Support continu</li>
+</ul>
+</div>
+</div>
+<p class="pricing-note">Les deux options incluent : hÃ©bergement sÃ©curisÃ©, conformitÃ© RGPD, donnÃ©es stockÃ©es en Europe.</p>
+</div>
+</div>
+
+<div class="section cta-section">
+<div class="section-number">07</div>
+<h2 class="section-title" style="text-align:center">Prochaine Ã©tape</h2>
+<p>DÃ©monstration live de BE Pilot en 30 minutes,<br>en visioconfÃ©rence ou dans vos locaux.</p>
+<div class="contact-info">
+<span class="name">Quentin CONVERT</span>
+<span class="role">Fondateur, Notitia Corp</span>
+<a href="mailto:notitiacorp@gmail.com">notitiacorp@gmail.com</a>
+<span class="phone">06 71 90 25 13</span>
+<a href="https://notitiacorp-design.github.io/notitia-corp/">notitiacorp-design.github.io/notitia-corp</a>
+</div>
+</div>
+
+<footer>
+<p>Â© 2026 Notitia Corp â Tous droits rÃ©servÃ©s</p>
+</footer>
+</div>
+</body>
+</html>
