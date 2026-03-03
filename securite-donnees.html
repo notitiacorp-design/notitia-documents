@@ -56,13 +56,14 @@ ul li::before{content:'';position:absolute;left:8px;top:14px;width:5px;height:5p
 @media print{
 .print-bar{display:none!important}
 .document{padding-top:0}
-.page{border:none;box-shadow:none;padding:32px;margin-bottom:0;page-break-inside:avoid}
+.page{border:none;box-shadow:none;padding:32px;margin-bottom:0}
 .watermark{color:rgba(10,22,40,0.04)!important}
 body{background:white}
 h2{page-break-after:avoid}
 .cert-grid{grid-template-columns:1fr 1fr}
 .contact-block{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-inside:avoid!important;page-break-before:avoid!important}
 .contact-section{page-break-inside:avoid!important}
+.doc-footer{margin-top:16px;padding:8px 0;border-top:none;page-break-before:avoid}
 }
 @media(max-width:640px){
 .document{padding:70px 12px 40px}
@@ -221,7 +222,7 @@ h2{page-break-after:avoid}
 
 <div class="contact-section">
 <h2><span class="num">9.</span> Contact et responsable des donnÃ©es</h2>
-<p>Pour toute question relative Ã  la sÃ©curitÃ©, la confidentialitÃ© ou lâexercice de vos droits RGPD :</p>
+<p>Pour toute question relative Ã  la sÃ©curitÃ©, la confidentialitÃ© ou lâexercice de vos droits RGPD&nbsp;:</p>
 <div class="contact-block">
 <div class="name">Quentin CONVERT</div>
 <div class="role">Fondateur et Responsable des donnÃ©es â Notitia Corp</div>
