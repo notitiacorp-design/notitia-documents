@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notitia Corp &mdash; Politique de donn&eacute;es et s&eacute;curit&eacute;</title>
+<title>Notitia Corp &#8212; Politique de donn&#233;es et s&#233;curit&#233;</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -79,160 +79,160 @@ h2{page-break-after:avoid}
 <body>
 <div class="print-bar">
 <span class="logo-text">Notitia Corp</span>
-<button class="print-btn" onclick="window.print()">Imprimer / T&eacute;l&eacute;charger en PDF</button>
+<button class="print-btn" onclick="window.print()">Imprimer / T&#233;l&#233;charger en PDF</button>
 </div>
 <div class="document">
 <div class="page">
 <div class="watermark">CONFIDENTIEL</div>
 <div class="doc-header">
 <div class="doc-header-top">
-<div class="doc-logo">Notitia Corp<span>Solutions num&eacute;riques sur mesure</span></div>
+<div class="doc-logo">Notitia Corp<span>Solutions num&#233;riques sur mesure</span></div>
 <div class="doc-meta">
-<strong>R&eacute;f&eacute;rence :</strong> NC-SEC-2026-01<br>
+<strong>R&#233;f&#233;rence :</strong> NC-SEC-2026-01<br>
 <strong>Date :</strong> 2 mars 2026<br>
 <strong>Version :</strong> 1.0<br>
 <strong>Classification :</strong> Confidentiel
 </div>
 </div>
-<h1 class="doc-title">Politique de donn&eacute;es et s&eacute;curit&eacute;</h1>
-<p class="doc-subtitle">Architecture technique, mesures de s&eacute;curit&eacute; et gestion des donn&eacute;es pour vos projets BE Pilot</p>
+<h1 class="doc-title">Politique de donn&#233;es et s&#233;curit&#233;</h1>
+<p class="doc-subtitle">Architecture technique, mesures de s&#233;curit&#233; et gestion des donn&#233;es pour vos projets BE Pilot</p>
 </div>
 
 <h2><span class="num">1.</span> Objet du document</h2>
-<p>Ce document d&eacute;crit l&rsquo;architecture technique, les mesures de s&eacute;curit&eacute; et la politique de gestion des donn&eacute;es mise en &oelig;uvre par Notitia Corp dans le cadre du d&eacute;ploiement de BE Pilot. Il a pour objectif de r&eacute;pondre aux exigences de confidentialit&eacute;, de souverainet&eacute; des donn&eacute;es et de conformit&eacute; r&eacute;glementaire (RGPD).</p>
+<p>Ce document d&#233;crit l&#8217;architecture technique, les mesures de s&#233;curit&#233; et la politique de gestion des donn&#233;es mise en &#339;uvre par Notitia Corp dans le cadre du d&#233;ploiement de BE Pilot. Il a pour objectif de r&#233;pondre aux exigences de confidentialit&#233;, de souverainet&#233; des donn&#233;es et de conformit&#233; r&#233;glementaire (RGPD).</p>
 
-<h2><span class="num">2.</span> Architecture d&rsquo;h&eacute;bergement</h2>
+<h2><span class="num">2.</span> Architecture d&#8217;h&#233;bergement</h2>
 
-<h3>2.1 Infrastructure par d&eacute;faut</h3>
-<p>Par d&eacute;faut, BE Pilot est d&eacute;ploy&eacute; sur une infrastructure cloud moderne et s&eacute;curis&eacute;e compos&eacute;e de :</p>
+<h3>2.1 Infrastructure par d&#233;faut</h3>
+<p>Par d&#233;faut, BE Pilot est d&#233;ploy&#233; sur une infrastructure cloud moderne et s&#233;curis&#233;e compos&#233;e de :</p>
 <ul>
-<li><strong>Application web :</strong> Vercel (CDN mondial, HTTPS forc&eacute;, certificats SSL/TLS automatiques)</li>
-<li><strong>Base de donn&eacute;es :</strong> Supabase, h&eacute;berg&eacute; sur AWS eu-west-1 (Dublin, Irlande)</li>
-<li><strong>R&eacute;gion de stockage :</strong> Union Europ&eacute;enne exclusivement</li>
+<li><strong>Application web :</strong> Vercel (CDN mondial, HTTPS forc&#233;, certificats SSL/TLS automatiques)</li>
+<li><strong>Base de donn&#233;es :</strong> Supabase, h&#233;berg&#233; sur AWS eu-west-1 (Dublin, Irlande)</li>
+<li><strong>R&#233;gion de stockage :</strong> Union Europ&#233;enne exclusivement</li>
 </ul>
 <div class="highlight-box">
-<p>Toutes vos donn&eacute;es &mdash; projets, chantiers, plannings, documents financiers, historiques SAV &mdash; restent physiquement stock&eacute;es sur le territoire de l&rsquo;Union Europ&eacute;enne, conform&eacute;ment au RGPD.</p>
+<p>Toutes vos donn&#233;es &#8212; projets, chantiers, plannings, documents financiers, historiques SAV &#8212; restent physiquement stock&#233;es sur le territoire de l&#8217;Union Europ&#233;enne, conform&#233;ment au RGPD.</p>
 </div>
 
-<h3>2.2 Flexibilit&eacute; de d&eacute;ploiement</h3>
-<p>Notitia Corp con&ccedil;oit ses syst&egrave;mes avec une architecture portable. BE Pilot peut &ecirc;tre d&eacute;ploy&eacute; sur :</p>
+<h3>2.2 Flexibilit&#233; de d&#233;ploiement</h3>
+<p>Notitia Corp con&#231;oit ses syst&#232;mes avec une architecture portable. BE Pilot peut &#234;tre d&#233;ploy&#233; sur :</p>
 <ul>
-<li>Tout h&eacute;bergeur cloud europ&eacute;en certifi&eacute; (OVHcloud, Scaleway, Hetzner)</li>
-<li>Serveur d&eacute;di&eacute; en France si souhait&eacute;</li>
+<li>Tout h&#233;bergeur cloud europ&#233;en certifi&#233; (OVHcloud, Scaleway, Hetzner)</li>
+<li>Serveur d&#233;di&#233; en France si souhait&#233;</li>
 <li>Infrastructure sur site (on-premise) dans les locaux du client</li>
 <li>Tout environnement compatible Docker/PostgreSQL</li>
 </ul>
-<p>Cette flexibilit&eacute; garantit que vous n&rsquo;&ecirc;tes jamais d&eacute;pendant d&rsquo;un prestataire unique. Si vous souhaitez migrer vers un autre h&eacute;bergeur &agrave; l&rsquo;avenir, Notitia Corp assure la migration compl&egrave;te sans perte de donn&eacute;es.</p>
+<p>Cette flexibilit&#233; garantit que vous n&#8217;&#234;tes jamais d&#233;pendant d&#8217;un prestataire unique. Si vous souhaitez migrer vers un autre h&#233;bergeur &#224; l&#8217;avenir, Notitia Corp assure la migration compl&#232;te sans perte de donn&#233;es.</p>
 
-<h3>2.3 Option h&eacute;bergement d&eacute;di&eacute; g&eacute;r&eacute; par Notitia Corp</h3>
-<p>Sur demande, Notitia Corp peut g&eacute;rer un h&eacute;bergement d&eacute;di&eacute; aupr&egrave;s d&rsquo;un tiers certifi&eacute; de votre choix (OVHcloud France, Scaleway Paris, ou autre). Dans ce cas, Notitia Corp agit en tant que sous-traitant au sens du RGPD et s&rsquo;engage contractuellement sur les niveaux de service (SLA), les sauvegardes et la confidentialit&eacute;.</p>
+<h3>2.3 Option h&#233;bergement d&#233;di&#233; g&#233;r&#233; par Notitia Corp</h3>
+<p>Sur demande, Notitia Corp peut g&#233;rer un h&#233;bergement d&#233;di&#233; aupr&#232;s d&#8217;un tiers certifi&#233; de votre choix (OVHcloud France, Scaleway Paris, ou autre). Dans ce cas, Notitia Corp agit en tant que sous-traitant au sens du RGPD et s&#8217;engage contractuellement sur les niveaux de service (SLA), les sauvegardes et la confidentialit&#233;.</p>
 
 <h2><span class="num">3.</span> Certifications et garanties des infrastructures</h2>
 <div class="cert-grid">
 <div class="cert-card">
 <h4>Supabase / AWS eu-west-1 (Dublin)</h4>
 <ul>
-<li><strong>ISO 27001</strong> &mdash; management de la s&eacute;curit&eacute; de l&rsquo;information</li>
-<li><strong>SOC 2 Type II</strong> &mdash; contr&ocirc;les audit&eacute;s annuellement</li>
-<li><strong>RGPD</strong> &mdash; DPA disponible, donn&eacute;es en UE</li>
-<li><strong>Chiffrement au repos</strong> &mdash; AES-256</li>
-<li><strong>Chiffrement en transit</strong> &mdash; TLS 1.2 minimum</li>
+<li><strong>ISO 27001</strong> &#8212; management de la s&#233;curit&#233; de l&#8217;information</li>
+<li><strong>SOC 2 Type II</strong> &#8212; contr&#244;les audit&#233;s annuellement</li>
+<li><strong>RGPD</strong> &#8212; DPA disponible, donn&#233;es en UE</li>
+<li><strong>Chiffrement au repos</strong> &#8212; AES-256</li>
+<li><strong>Chiffrement en transit</strong> &#8212; TLS 1.2 minimum</li>
 </ul>
 </div>
 <div class="cert-card">
 <h4>Vercel</h4>
 <ul>
-<li><strong>SOC 2 Type II</strong> certifi&eacute;</li>
-<li>HTTPS forc&eacute; sur toutes les URLs</li>
-<li>D&eacute;ploiements isol&eacute;s par environnement</li>
+<li><strong>SOC 2 Type II</strong> certifi&#233;</li>
+<li>HTTPS forc&#233; sur toutes les URLs</li>
+<li>D&#233;ploiements isol&#233;s par environnement</li>
 </ul>
 </div>
 </div>
 
-<h2><span class="num">4.</span> Mesures de s&eacute;curit&eacute; applicatives</h2>
+<h2><span class="num">4.</span> Mesures de s&#233;curit&#233; applicatives</h2>
 
 <h3>Authentification</h3>
 <ul>
-<li>Authentification s&eacute;curis&eacute;e via Supabase Auth (tokens JWT sign&eacute;s)</li>
+<li>Authentification s&#233;curis&#233;e via Supabase Auth (tokens JWT sign&#233;s)</li>
 <li>Sessions avec expiration automatique</li>
-<li>Mots de passe hach&eacute;s (bcrypt)</li>
-<li>Possibilit&eacute; d&rsquo;activer l&rsquo;authentification &agrave; deux facteurs (2FA)</li>
+<li>Mots de passe hach&#233;s (bcrypt)</li>
+<li>Possibilit&#233; d&#8217;activer l&#8217;authentification &#224; deux facteurs (2FA)</li>
 </ul>
 
-<h3>Contr&ocirc;le d&rsquo;acc&egrave;s</h3>
+<h3>Contr&#244;le d&#8217;acc&#232;s</h3>
 <ul>
-<li><strong>Syst&egrave;me de r&ocirc;les et permissions :</strong> Direction, Chef de chantier, Technicien, Commercial</li>
-<li>Chaque utilisateur n&rsquo;acc&egrave;de qu&rsquo;aux donn&eacute;es correspondant &agrave; son r&ocirc;le</li>
-<li>Politiques Row Level Security (RLS) directement en base de donn&eacute;es &mdash; impossible de contourner c&ocirc;t&eacute; applicatif</li>
+<li><strong>Syst&#232;me de r&#244;les et permissions :</strong> Direction, Chef de chantier, Technicien, Commercial</li>
+<li>Chaque utilisateur n&#8217;acc&#232;de qu&#8217;aux donn&#233;es correspondant &#224; son r&#244;le</li>
+<li>Politiques Row Level Security (RLS) directement en base de donn&#233;es &#8212; impossible de contourner c&#244;t&#233; applicatif</li>
 </ul>
 
-<h3>Tra&ccedil;abilit&eacute;</h3>
+<h3>Tra&#231;abilit&#233;</h3>
 <ul>
-<li>Logs d&rsquo;acc&egrave;s complets (qui a acc&eacute;d&eacute; &agrave; quoi, quand)</li>
-<li>Historique des modifications sur les donn&eacute;es critiques</li>
-<li>Journal d&rsquo;audit disponible sur demande</li>
+<li>Logs d&#8217;acc&#232;s complets (qui a acc&#233;d&#233; &#224; quoi, quand)</li>
+<li>Historique des modifications sur les donn&#233;es critiques</li>
+<li>Journal d&#8217;audit disponible sur demande</li>
 </ul>
 </div>
 
 <div class="page">
 <div class="watermark">CONFIDENTIEL</div>
 
-<h2><span class="num">5.</span> Vos donn&eacute;es vous appartiennent</h2>
+<h2><span class="num">5.</span> Vos donn&#233;es vous appartiennent</h2>
 <div class="highlight-box">
-<p>Notitia Corp n&rsquo;exploite, ne revend et n&rsquo;analyse jamais les donn&eacute;es de ses clients &agrave; des fins propres.</p>
+<p>Notitia Corp n&#8217;exploite, ne revend et n&#8217;analyse jamais les donn&#233;es de ses clients &#224; des fins propres.</p>
 </div>
-<p>Vos donn&eacute;es sont :</p>
+<p>Vos donn&#233;es sont :</p>
 <ul>
-<li>Exclusivement accessibles &agrave; vos &eacute;quipes autoris&eacute;es et &agrave; Notitia Corp dans le cadre de la maintenance</li>
-<li>Jamais partag&eacute;es avec des tiers sans accord explicite &eacute;crit</li>
-<li>Exportables &agrave; tout moment en format standard (CSV, JSON, PDF)</li>
-<li>Supprim&eacute;es int&eacute;gralement sur demande, dans un d&eacute;lai de 30 jours</li>
+<li>Exclusivement accessibles &#224; vos &#233;quipes autoris&#233;es et &#224; Notitia Corp dans le cadre de la maintenance</li>
+<li>Jamais partag&#233;es avec des tiers sans accord explicite &#233;crit</li>
+<li>Exportables &#224; tout moment en format standard (CSV, JSON, PDF)</li>
+<li>Supprim&#233;es int&#233;gralement sur demande, dans un d&#233;lai de 30 jours</li>
 </ul>
 
-<h2><span class="num">6.</span> Sauvegardes et continuit&eacute;</h2>
+<h2><span class="num">6.</span> Sauvegardes et continuit&#233;</h2>
 <table class="sla-table">
-<thead><tr><th>Mesure</th><th>D&eacute;tail</th></tr></thead>
+<thead><tr><th>Mesure</th><th>D&#233;tail</th></tr></thead>
 <tbody>
 <tr><td>Sauvegardes automatiques</td><td>Quotidiennes</td></tr>
-<tr><td>R&eacute;tention</td><td>30 jours minimum</td></tr>
-<tr><td>Restauration</td><td>N&rsquo;importe quel point dans les 30 derniers jours</td></tr>
+<tr><td>R&#233;tention</td><td>30 jours minimum</td></tr>
+<tr><td>Restauration</td><td>N&#8217;importe quel point dans les 30 derniers jours</td></tr>
 <tr><td>Temps de restauration cible</td><td>Moins de 4 heures</td></tr>
 </tbody>
 </table>
 
-<h2><span class="num">7.</span> Conformit&eacute; RGPD</h2>
-<p>Notitia Corp agit en qualit&eacute; de sous-traitant au sens de l&rsquo;article 28 du RGPD. &Agrave; ce titre :</p>
+<h2><span class="num">7.</span> Conformit&#233; RGPD</h2>
+<p>Notitia Corp agit en qualit&#233; de sous-traitant au sens de l&#8217;article 28 du RGPD. &#192; ce titre :</p>
 <ul>
-<li>Un <strong>Contrat de Traitement des Donn&eacute;es (DPA)</strong> est syst&eacute;matiquement sign&eacute; avec chaque client</li>
-<li>Les finalit&eacute;s de traitement sont strictement limit&eacute;es &agrave; la fourniture du service</li>
-<li>Aucun transfert de donn&eacute;es hors UE</li>
-<li>Notitia Corp est en mesure de fournir un <strong>Registre des activit&eacute;s de traitement</strong> sur demande</li>
-<li>En cas de violation de donn&eacute;es, vous serez notifi&eacute; <strong>dans les 72 heures</strong> conform&eacute;ment &agrave; l&rsquo;article 33 du RGPD</li>
+<li>Un <strong>Contrat de Traitement des Donn&#233;es (DPA)</strong> est syst&#233;matiquement sign&#233; avec chaque client</li>
+<li>Les finalit&#233;s de traitement sont strictement limit&#233;es &#224; la fourniture du service</li>
+<li>Aucun transfert de donn&#233;es hors UE</li>
+<li>Notitia Corp est en mesure de fournir un <strong>Registre des activit&#233;s de traitement</strong> sur demande</li>
+<li>En cas de violation de donn&#233;es, vous serez notifi&#233; <strong>dans les 72 heures</strong> conform&#233;ment &#224; l&#8217;article 33 du RGPD</li>
 </ul>
 
 <h2><span class="num">8.</span> Engagements contractuels</h2>
 <table class="sla-table">
 <thead><tr><th>Engagement</th><th>Niveau</th></tr></thead>
 <tbody>
-<tr><td>Disponibilit&eacute; cible</td><td><strong>99,5%</strong> (hors maintenance planifi&eacute;e)</td></tr>
-<tr><td>Support</td><td>R&eacute;ponse sous <strong>24h ouvr&eacute;es</strong>, r&eacute;solution sous 72h pour incidents critiques</td></tr>
-<tr><td>Mises &agrave; jour de s&eacute;curit&eacute;</td><td>Appliqu&eacute;es dans les <strong>48h</strong> suivant la publication d&rsquo;un correctif critique</td></tr>
+<tr><td>Disponibilit&#233; cible</td><td><strong>99,5%</strong> (hors maintenance planifi&#233;e)</td></tr>
+<tr><td>Support</td><td>R&#233;ponse sous <strong>24h ouvr&#233;es</strong>, r&#233;solution sous 72h pour incidents critiques</td></tr>
+<tr><td>Mises &#224; jour de s&#233;curit&#233;</td><td>Appliqu&#233;es dans les <strong>48h</strong> suivant la publication d&#8217;un correctif critique</td></tr>
 </tbody>
 </table>
 
 <div class="contact-section">
-<h2><span class="num">9.</span> Contact et responsable des donn&eacute;es</h2>
-<p>Pour toute question RGPD ou relative &agrave; la s&eacute;curit&eacute; des donn&eacute;es&nbsp;:</p>
+<h2><span class="num">9.</span> Contact et responsable des donn&#233;es</h2>
+<p>Pour toute question RGPD ou relative &#224; la s&#233;curit&#233; des donn&#233;es&#160;:</p>
 <div class="contact-block">
 <div class="name">Quentin CONVERT</div>
-<div class="role">Fondateur et Responsable des donn&eacute;es &mdash; Notitia Corp</div>
+<div class="role">Fondateur et Responsable des donn&#233;es &#8212; Notitia Corp</div>
 <div class="detail"><a href="mailto:notitiacorp@gmail.com">notitiacorp@gmail.com</a></div>
 <div class="detail">06 71 90 25 13</div>
 </div>
 </div>
 
 <div class="doc-footer">
-<p>&copy; 2026 Notitia Corp &mdash; Document confidentiel &mdash; Reproduction interdite sans autorisation &eacute;crite</p>
+<p>&#169; 2026 Notitia Corp &#8212; Document confidentiel &#8212; Reproduction interdite sans autorisation &#233;crite</p>
 </div>
 </div>
 </div>
